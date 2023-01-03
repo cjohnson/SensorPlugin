@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class SlimeIndicator {
     private ArrayList<Player> subscribers = new ArrayList<>();
-    private SlimeRadio radio = new SlimeRadio(2);
+    private SlimeSensor radio = new SlimeSensor(2);
 
     public void indicate() {
         for(Player player : subscribers) {
