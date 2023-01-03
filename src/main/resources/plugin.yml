@@ -1,0 +1,4 @@
+name: SensorPlugin
+version: '${version}'
+main: org.cjohnson.sensorplugin.SensorPlugin
+api-version: 1.19
