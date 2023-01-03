@@ -9,12 +9,11 @@ import java.util.ArrayList;
 
 public class SlimeIndicator {
     private ArrayList<Player> subscribers = new ArrayList<>();
-    private SlimeSensor radio = new SlimeSensor(2);
+    private SlimeSensor radio = new SlimeSensor();
 
     public void indicate() {
         for(Player player : subscribers) {
-            radio.sample(player.getLocation());
-            ArrayList<Chunk> slimeChunks = radio.getSlimeChunks();
+            ArrayList<Chunk> slimeChunks = radio.sample(player.getLocation(), 2);
 
             for (Chunk slimeChunk : slimeChunks) {
                 renderIndicatorHalo(player, slimeChunk.getX(), player.getLocation().getBlockY(), slimeChunk.getZ());
