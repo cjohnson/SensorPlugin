@@ -1,13 +1,13 @@
 package org.cjohnson.sensorplugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.cjohnson.sensorplugin.command.SensorCommand;
 
 public final class SensorPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
-
+        getCommand("sensor").setExecutor(new SensorCommand());
     }
 
     @Override
